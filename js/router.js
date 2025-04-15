@@ -4,14 +4,7 @@ let pageUrls = {
     home: '/index.html?home',
     gallery: '/index.html?gallery'
 };
-const serverless = require('serverless-http');
-const express = require('express');
-const app = express();
-app.set('view engine', 'ejs');
 
-// Eksport aplikacji jako funkcja serverless
-module.exports = app;
-module.exports.handler = serverless(app);
 
 const galleryImages = [
     { id: 1, url: 'https://picsum.photos/id/10/800/800', title: 'Nature 1' },
